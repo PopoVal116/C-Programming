@@ -1,15 +1,10 @@
 #include <stdio.h>
 int main(){
-        int n=2;
-        int a;
-        scanf("%d", &a);
-        int flag =0;
-        while(a%n!=0){
-             n++;
-             if(n==a){
-                   flag =1;
-                   break;}
-}
-if(flag==1){printf("простое число");}
-else{printf("составное число");}
+        int N;
+        scanf("%d", &N);
+        for(int i=1; i<=N; i++){
+             printf("%d",i);
+             for(int k=1; k <=(N+1)-i; k++){
+                   printf("%c", 'o');}
+                   printf("\n");}
 }
