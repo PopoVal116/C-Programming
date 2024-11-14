@@ -13,7 +13,7 @@ void inputMatrix(int matrix[MAX_SIZE][MAX_SIZE], int n) { // ввод матри
                 printf("Элемент [%d][%d]: ", i + 1, j + 1);
                 if (scanf("%d", &matrix[i][j]) != 1) {
                     printf("Ошибка ввода. Пожалуйста, введите целое число\n");
-                    while (getchar() != '\n'); // очистка буфера ввода
+                    return;
                 } else if (matrix[i][j] < 0) {
                     printf("Ошибка: элемент не может быть отрицательным. Пожалуйста, заполните матрицу заново\n");
                     return; // возвращаемся к вызову в main для повторного ввода
@@ -89,7 +89,7 @@ int main() {
         printf("Введите размерность матрицы (n <= %d): ", MAX_SIZE);
         if (scanf("%d", &n) != 1 || n <= 0 || n > MAX_SIZE) { 
             printf("Ошибка ввода. Пожалуйста, введите целое число от 1 до %d\n", MAX_SIZE);
-            while (getchar() != '\n'); // очистка буфера ввода
+            return 0;
         } else {
             break;
         }
