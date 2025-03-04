@@ -1,5 +1,5 @@
 #privet privet
-
+#хорошего дня!!
 void InsertSort(int n, int A[n]){
     C = 0;
     M = 0;
