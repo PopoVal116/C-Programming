@@ -16,6 +16,6 @@ int main() {
         printf("%d ", a[i]);
     }
     printf("\n");
-
+    printf("hello git\n");
     return 0;
 }
