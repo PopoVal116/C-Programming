@@ -1,20 +1,21 @@
 #privet privet
 #хорошего дня!!
-void InsertSort(int n, int A[n]){
-    C = 0;
-    M = 0;
-    for(int i = 1; i < n; i ++){
-        int temp = A[i];
-        M++;
-        int j = i - 1;
-        while (j >= 0 && A[j] > temp){
-            C++;
-            A[j + 1] = A[j];
-            M++;
-            j--;
-        }
-        C++;
-        A[j + 1] = temp;
-        M++;
+int main() {
+    int a[] = {4, 2};
+    int n = sizeof(a) / sizeof(a[0]);
+    printf("Массив до сортировки: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
     }
+    printf("\n");
+
+    insertionSort(a, n);  // Или shellSort(a,n);
+
+    printf("Массив после сортировки: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
