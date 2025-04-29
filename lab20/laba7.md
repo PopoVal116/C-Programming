@@ -34,7 +34,10 @@ void ex1(){
 1. pthread_t children; - это идентификация переменной children для хранения дочернего потока
 2. pthread_create(&children, NULL, children_func1, NULL); - само создание потока, для которого передается переменная children, хранящая в себе дочерний поток, и children_func1
 Результат вполнения 1 задания:
+
+
 ![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
 
 Задание 2: Последовательное выполнение потоков
 
@@ -55,7 +58,11 @@ void ex2(){
 ```
 Ключевое отличие от задания 1 — pthread_join вызывается до основного цикла main, что гарантирует завершение дочернего потока перед началом вывода основного.
 Результат вполнения 2 задания:
-![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
+
+![image](https://github.com/user-attachments/assets/034fef29-3580-4547-b8c4-e0020b6898e3)
+
+
 
 Задание 3: Несколько потоков с разными задачами
 
@@ -97,7 +104,12 @@ void ex3(){
 
 Каждому потоку передается уникальное описание задачи — это демонстрирует передачу аргументов в потоки.
 Результат вполнения 3 задания:
-![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
+
+![image](https://github.com/user-attachments/assets/b419f3a9-3815-4762-97b9-ec5f2135af29)
+
+
+
 Задание 4: Прерывание потоков
 
 Используется pthread_cancel для прерывания работы потоков после 2 секунд.
@@ -133,7 +145,10 @@ void ex4(){
 
 Здесь показано использование pthread_cancel.
 Результат вполнения 4 задания:
-![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
+
+![image](https://github.com/user-attachments/assets/b3f71e3b-5f18-4c19-8a7f-fe652e5d00ad)
+
 
 
 Задание 5: Очистка при отмене потока
@@ -184,7 +199,10 @@ void ex5() {
 
 В отличие от ex4, в этом примере каждый поток завершает работу с вызовом очистки, что делает отмену "чистой".
 Результат вполнения 5 задания:
-![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
+
+![image](https://github.com/user-attachments/assets/dde3daf5-02ea-4101-8bc2-91493fa4bd2e)
+
 
 
 Задание 6: Сортировка с помощью потоков (Sleep Sort)
@@ -219,4 +237,7 @@ void ex6(){
 Такой подход демонстрирует оригинальный способ сортировки с использованием параллелизма. Подходит для демонстрации, но неэффективен для практического использования.
 
 Результат вполнения 6 задания:
-![image](https://github.com/user-attachments/assets/32274da8-4460-4282-b558-78f3d72d9389)
+
+
+![image](https://github.com/user-attachments/assets/5209ea44-35b9-4afe-89f5-40dc66ee04f4)
+
