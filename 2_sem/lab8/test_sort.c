@@ -7,9 +7,7 @@
 
 // Проверяет, отсортирован ли массив (числа идут по порядку от меньшего к большему)
 int is_sorted(int nums[], int count) {
-    // Проходим по массиву, но не до конца, чтобы сравнить с следующим числом
     for (int i = 0; i < count - 1; i++) {
-        // Если текущее число больше следующего, массив не отсортирован
         if (nums[i] > nums[i + 1]) {
             // Возвращаем 0 (значит "не отсортирован")
             return 0;
@@ -21,7 +19,6 @@ int is_sorted(int nums[], int count) {
 
 // Тест для bubbleSort с пустым массивом
 void test_empty(void **state) {
-    // Создаем указатель на массив, но он пустой (NULL)
     int *nums = NULL;
     // Создаем счетчики для сравнений и перемещений, ставим 0
     int comps = 0, moves = 0;
@@ -37,9 +34,7 @@ void test_empty(void **state) {
 void test_one_num(void **state) {
     // Создаем массив с одним числом: 1
     int nums[] = {1};
-    // Создаем счетчики и ставим 0
     int comps = 0, moves = 0;
-    // Вызываем bubbleSort для массива с одним числом
     bubbleSort(nums, 1, &comps, &moves);
     // Проверяем, что число осталось 1 (не должно измениться)
     assert_int_equal(nums[0], 1);
@@ -53,7 +48,6 @@ void test_one_num(void **state) {
 void test_sorted(void **state) {
     // Создаем отсортированный массив: 1, 2, 3, 4, 5
     int nums[] = {1, 2, 3, 4, 5};
-    // Создаем счетчики и ставим 0
     int comps = 0, moves = 0;
     // Вызываем bubbleSort
     bubbleSort(nums, 5, &comps, &moves);
@@ -69,9 +63,7 @@ void test_sorted(void **state) {
 void test_reverse(void **state) {
     // Создаем массив в обратном порядке: 5, 4, 3, 2, 1
     int nums[] = {5, 4, 3, 2, 1};
-    // Создаем счетчики и ставим 0
     int comps = 0, moves = 0;
-    // Вызываем bubbleSort, чтобы отсортировать
     bubbleSort(nums, 5, &comps, &moves);
     // Проверяем, что массив теперь отсортирован
     assert_true(is_sorted(nums, 5));
@@ -85,9 +77,7 @@ void test_reverse(void **state) {
 void test_random(void **state) {
     // Создаем массив с числами в случайном порядке: 3, 1, 4, 5, 2
     int nums[] = {3, 1, 4, 5, 2};
-    // Создаем счетчики и ставим 0
     int comps = 0, moves = 0;
-    // Вызываем bubbleSort, чтобы отсортировать
     bubbleSort(nums, 5, &comps, &moves);
     // Проверяем, что массив отсортирован
     assert_true(is_sorted(nums, 5));
@@ -101,9 +91,7 @@ void test_random(void **state) {
 void test_same_nums(void **state) {
     // Создаем массив с повторяющимися числами: 3, 1, 3, 2, 1
     int nums[] = {3, 1, 3, 2, 1};
-    // Создаем счетчики и ставим 0
     int comps = 0, moves = 0;
-    // Вызываем bubbleSort, чтобы отсортировать
     bubbleSort(nums, 5, &comps, &moves);
     // Проверяем, что массив отсортирован
     assert_true(is_sorted(nums, 5));
@@ -212,9 +200,7 @@ void test_random_five(void **state) {
 
 // Главная функция, которая запускает все тесты
 int main(void) {
-    // Создаем список всех тестов
     const struct CMUnitTest tests[] = {
-        // Добавляем каждый тест в список
         cmocka_unit_test(test_empty),
         cmocka_unit_test(test_one_num),
         cmocka_unit_test(test_sorted),
